@@ -1,0 +1,24 @@
+// Classe Main para teste
+public class Main {
+    public static void main(String[] args) {
+        // Testando a média aritmética
+        ICalcMedia aritmetica = new Aritmetica();
+        Disciplina d1 = new Disciplina(aritmetica);
+        d1.setNome("Padrões de Desenvolvimento");
+        d1.setP1(10);
+        d1.setP2(5);
+        d1.calcularMedia();
+        System.out.println(String.format("P1: %.2f P2: %.2f Média: %.2f Situação: %s",
+                d1.getP1(), d1.getP2(), d1.getMedia(), d1.getSituacao()));
+
+        // Testando a média geométrica
+        ICalcMedia geometrica = new Geometrica();
+        Disciplina d2 = new Disciplina(geometrica);
+        d2.setNome("Padrões de Desenvolvimento");
+        d2.setP1(9);
+        d2.setP2(7);
+        d2.calcularMedia();
+        System.out.println(String.format("P1: %.2f P2: %.2f Média: %.2f Situação: %s",
+                d2.getP1(), d2.getP2(), d2.getMedia(), d2.getSituacao()));
+    }
+}
